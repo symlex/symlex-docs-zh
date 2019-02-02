@@ -1,31 +1,22 @@
-# Symlex: A lean framework stack for agile Web development based on Symfony and Vuetify
+# Symlex: 基于 Symfony 和 Vuetify 的敏捷 Web 开发的精简框架。
 
-**Symlex aims to simplify agile Web development by providing a working system that promotes best practices by example:**
+**Symlex 旨在通过提供一个通过示例推广最佳实践的工作系统来简化敏捷 Web 开发:**
 
-  - Built on top of well documented and tested standard components
-  - Contains everything to create full-featured Web applications: Service container, REST routing & Twig template engine
-  - Strict use of dependency injection for configuration and bootstrapping
-  - Small code and memory footprint
-  - Extremely fast compared to other PHP frameworks
+- 建立在经过充分记录和测试的标准组件之上
+- 包含创建全功能 Web 应用程序的所有内容：服务容器， REST 路由和 Twig 模板引擎
+- 严格使用依赖注入进行配置和引导
+- 小代码和内存占用
+- 与其他 PHP 框架相比，速度极快
 
-Since its initial release in 2014, it has proven to be well suited for rapidly building microservices, 
-CLI and single-page applications. It comes complete with working examples from testing to forms and database 
-abstraction. Simply delete what you don't need.
+自 2014 年首次发布以来，它已被证明非常适合快速构建微服务， CLI 和单页面应用程序。 它包含从测试到表单和数据库的工作示例抽象。 只需删除您不需要的内容即可。
 
-The [kernel](https://github.com/symlex/di-microkernel) is tiny and only creates a 
-service container for bootstrapping your application within its context.
-Using a single container for configuration and dependency injection reduces complexity and leads to improved 
-performance compared to other frameworks.
-It also prevents developers from thoughtlessly installing bundles without understanding
-them. The result is less bloat and simpler, more maintainable and testable code that is fundamental for agile development.
-            
-Plain classes are used wherever possible to avoid vendor lock-in and enable framework independent code reuse.
+[内核](https://github.com/symlex/di-microkernel) 很小，只创建一个服务容器，用于在其上下文中引导应用程序。使用单个容器进行配置和依赖注入可以降低复杂性并导致改进 性能与其他框架相比。 它还可以防止开发人员在不了解它们的情况下轻率地安装捆绑包。 结果是更少的膨胀和更简单，更易维护和可测试的代码，这是敏捷开发的基础。
 
-You can combine the PHP based backend with any JavaScript library or REST client. The front-end boilerplate is there for 
-your convenience and puts you straight on track for building impressive single-page applications with Webpack and Vuetify,
-see [demo.symlex.org](https://demo.symlex.org). 
-A working example for command line applications is included as well.
+尽可能使用普通类来避免供应商锁定并启用框架无关的代码重用。
 
-!!! info
-    Feel free to send an e-mail to [hello@symlex.org](mailto:hello@symlex.org) if you have any questions, 
-    need [commercial support](https://blog.liquidbytes.net/contact/) or just want to say hello.
+您可以将基于 PHP 的后端与任何 JavaScript 库或 REST 客户端相结合。 前端样板是为了您的方便，让您直接通过 Webpack 和 Vuetify 构建令人印象深刻的单页应用程序，请参阅 [demo.symlex.org](https://demo.symlex.org)。
+
+还包括命令行应用程序的工作示例。
+
+!!! 信息
+    如果您有任何疑问，请随时发送电子邮件至 [hello@symlex.org](mailto：hello@symlex.org) ，需要[商业支持](https://blog.liquidbytes.net/contact/)或只是想打个招呼。
