@@ -1,19 +1,9 @@
-# Relationship with Symfony and Silex
+# Symfony 和 Silex 的关系
 
-Symlex was started in 2014 as a simple Silex boilerplate, since Silex itself doesn't come with a "Standard Edition" 
-that points you in the right direction. Using Silex instead of Symfony was recommend by SensioLabs (the creators 
-of both frameworks) as a light-weight alternative to Symfony + FOSRestBundle for quickly building high-performance 
-REST services and single-page Web applications.
+Symlex 于 2014 年作为一个简单的 Silex 样板开始，因为 Silex 本身没有『标准版』这指向了正确的方向。 SensioLabs『创作者』推荐使用 Silex 代替 Symfony 两种框架，作为 Symfony + FOSRestBundle 的轻量级替代品，可快速构建高性能 REST 服务和单页 Web 应用程序。
 
-It was soon noticed that Pimple - the service container that comes with Silex - feels cumbersome for developers 
-coming from Symfony and makes it hard to reuse existing code. In addition, many Silex code examples and even real-world 
-applications accessed the service container from all parts of the code (not only the framework itself), 
-which circumvents inversion of control and leads to awkward testability. Symlex therefore promotes the strict use of dependency 
-injection and combines the convenience of a full-fledged service container with the speed of a micro-framework.
+很快就注意到 Pimple -- Silex 附带的服务容器 - 对于来自 Symfony 的开发人员来说感觉很麻烦，并且很难重用现有的代码。 此外，许多 Silex 代码示例甚至是现实世界的应用程序都从代码的所有部分『不仅仅是框架本身』访问服务容器，这避免了控制的反转并导致难以测试的可测试性。 因此， Symlex 促进了依赖注入的严格使用，并将完整服务容器的便利性与微框架的速度相结合。
 
-Today, Symlex has its own routing component (based on Symfony 4) and does not use Silex anymore. 
-The framework has proven to be useful for a large number of different applications. Some of them were based on the regular
-Symfony kernel before and did the change because they were drowning in complexity and suffered from response times well 
-above 30 seconds in development mode. Symlex brought them back on track without big changes to their existing code base.
+今天，Symlex有自己的路由组件基于 Symfony 4，不再使用 Silex了 。 事实证明，该框架对大量不同的应用程序非常有用。 其中一些基于之前的常规 Symfony 内核并进行了更改，因为它们在复杂性方面淹没，并且在开发模式下的响应时间远远超过30秒。 Symlex 使他们重回正轨，而不对现有代码库进行大的改动。
 
 <img src="https://symlex.org/images/symlex-vs-symfony.svg" alt="Micro-Kernel Architecture" width="100%">
