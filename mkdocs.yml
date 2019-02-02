@@ -14,7 +14,7 @@ repo_url: https://github.com/symlex/symlex
 edit_uri: ""
 
 # Copyright
-copyright: 'Made with ❤ in Berlin'
+copyright: 'Made with ❤ in Berlin 中文翻译由 Tuzi Moe 提供'
 
 # Configuration
 theme:
@@ -86,53 +86,53 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Introduction: index.md
-  - Performance: performance.md
-  - History: history.md
-  - Tradeoffs: tradeoffs.md
-  - Team: team.md
-  - Contact: contact.md
-  - Contribute: contribute.md
-  - Credits: credits.md
+  - 欢迎: index.md
+  - 性能: performance.md
+  - 历史: history.md
+  - 妥协与否: tradeoffs.md
+  - 团队: team.md
+  - 联系我们: contact.md
+  - 贡献: contribute.md
+  - 致谢: credits.md
   - License: license.md
   - Mac OS X: osx.md
-  - Framework:
-    - Getting Started: framework.md
-    - Configuration: framework/config.md
-    - Bootstrapping: framework/kernel.md
-    - Routing & Twig: framework/routing.md
-    - Commands: framework/cli.md
-    - Web Frontend: framework/frontend.md
-    - Web Controllers: framework/web.md
-    - REST Controllers: framework/rest.md
-    - Input Validation: framework/forms.md
-    - Persistence Layer: framework/models.md
-    - Error Handling: framework/errors.md
-    - Symfony Bundles: framework/bundles.md
-    - Unit Tests: framework/unit-tests.md
-    - Acceptance Tests: framework/acceptance-tests.md
-  - Core:
-    - Introduction: core.md
-    - Kernel: core/kernel.md
-    - Routers: core/routers.md
-  - DIMicroKernel:
-    - Introduction: di-microkernel.md
-    - Configuration: di-microkernel/config.md
-    - Contribute: di-microkernel/contribute.md
-  - InputValidation:
-    - Introduction: input-validation.md
-    - Create Forms: input-validation/definition.md
+  - 框架:
+    - 简易入门: framework.md
+    - 配置框架: framework/config.md
+    - 启动框架: framework/kernel.md
+    - 路由 & Twig: framework/routing.md
+    - 指令: framework/cli.md
+    - 网页前端: framework/frontend.md
+    - 网页控制器: framework/web.md
+    - REST 控制器: framework/rest.md
+    - 输入变量: framework/forms.md
+    - 持久层: framework/models.md
+    - 错误: framework/errors.md
+    - Symfony 捆绑包: framework/bundles.md
+    - 单元测试: framework/unit-tests.md
+    - 验收测试: framework/acceptance-tests.md
+  - 核心部分:
+    - 介绍: core.md
+    - 内核: core/kernel.md
+    - 路由: core/routers.md
+  - DI 微内核:
+    - 介绍: di-microkernel.md
+    - 配置: di-microkernel/config.md
+    - 贡献: di-microkernel/contribute.md
+  - 输入变量:
+    - 介绍: input-validation.md
+    - 创建表单: input-validation/definition.md
     - Field Properties: input-validation/properties.md
-    - REST Example: input-validation/example.md
+    - REST 示例: input-validation/example.md
     - API: input-validation/api.md
-    - Tradeoffs: input-validation/tradeoffs.md
-    - Contribute: input-validation/contribute.md
+    - 妥协与否: input-validation/tradeoffs.md
+    - 贡献: input-validation/contribute.md
   - Doctrine ActiveRecord:
-    - Introduction: doctrine-active-record.md
-    - Examples: doctrine-active-record/examples.md
-    - Business Models: doctrine-active-record/models.md
+    - 介绍: doctrine-active-record.md
+    - 示例: doctrine-active-record/examples.md
+    - 生产模式: doctrine-active-record/models.md
     - Data Access Objects: doctrine-active-record/daos.md
-    - Search Queries: doctrine-active-record/search.md
-    - Unit Tests: doctrine-active-record/tests.md
-    - Tradeoffs: doctrine-active-record/tradeoffs.md
-    - Contribute: doctrine-active-record/contribute.md
+    - Search 请求: doctrine-active-record/search.md
+    - 单元测试: doctrine-active-record/tests.md
+    - 妥协与否: doctrine-active-record/tradeoffs.md
+    - 贡献: doctrine-active-record/contribute.md
