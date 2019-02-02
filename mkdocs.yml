@@ -1,0 +1,138 @@
+# Paths
+docs_dir: docs
+site_dir: site
+
+# Project information
+site_name: Symlex
+site_description: A lean framework stack for agile Web development based on Symfony and Vuetify
+site_author: Symlex.org
+site_url: https://docs.symlex.org/en/latest
+
+# Repository
+repo_name: symlex/symlex
+repo_url: https://github.com/symlex/symlex
+edit_uri: ""
+
+# Copyright
+copyright: 'Made with ❤ in Berlin'
+
+# Configuration
+theme:
+  name: null
+  custom_dir: material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: zh
+  feature:
+    tabs: true
+  palette:
+    primary: blue grey
+    accent: cyan
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: img/favicon.ico
+  logo: img/favicon.ico
+
+# Customization
+extra:
+  social:
+    - type: commenting
+      link: https://gitter.im/symlex/community
+    - type: twitter
+      link: https://twitter.com/lastzero
+    - type: linkedin
+      link: https://www.linkedin.com/in/lastzero/
+    - type: globe
+      link: https://symlex.org/
+    - type: github-alt
+      link: https://github.com/symlex
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: pymdownx.emoji.emojione
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Introduction: index.md
+  - Performance: performance.md
+  - History: history.md
+  - Tradeoffs: tradeoffs.md
+  - Team: team.md
+  - Contact: contact.md
+  - Contribute: contribute.md
+  - Credits: credits.md
+  - License: license.md
+  - Mac OS X: osx.md
+  - Framework:
+    - Getting Started: framework.md
+    - Configuration: framework/config.md
+    - Bootstrapping: framework/kernel.md
+    - Routing & Twig: framework/routing.md
+    - Commands: framework/cli.md
+    - Web Frontend: framework/frontend.md
+    - Web Controllers: framework/web.md
+    - REST Controllers: framework/rest.md
+    - Input Validation: framework/forms.md
+    - Persistence Layer: framework/models.md
+    - Error Handling: framework/errors.md
+    - Symfony Bundles: framework/bundles.md
+    - Unit Tests: framework/unit-tests.md
+    - Acceptance Tests: framework/acceptance-tests.md
+  - Core:
+    - Introduction: core.md
+    - Kernel: core/kernel.md
+    - Routers: core/routers.md
+  - DIMicroKernel:
+    - Introduction: di-microkernel.md
+    - Configuration: di-microkernel/config.md
+    - Contribute: di-microkernel/contribute.md
+  - InputValidation:
+    - Introduction: input-validation.md
+    - Create Forms: input-validation/definition.md
+    - Field Properties: input-validation/properties.md
+    - REST Example: input-validation/example.md
+    - API: input-validation/api.md
+    - Tradeoffs: input-validation/tradeoffs.md
+    - Contribute: input-validation/contribute.md
+  - Doctrine ActiveRecord:
+    - Introduction: doctrine-active-record.md
+    - Examples: doctrine-active-record/examples.md
+    - Business Models: doctrine-active-record/models.md
+    - Data Access Objects: doctrine-active-record/daos.md
+    - Search Queries: doctrine-active-record/search.md
+    - Unit Tests: doctrine-active-record/tests.md
+    - Tradeoffs: doctrine-active-record/tradeoffs.md
+    - Contribute: doctrine-active-record/contribute.md
