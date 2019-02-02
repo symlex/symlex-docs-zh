@@ -6,7 +6,7 @@ site_dir: site
 site_name: Symlex
 site_description: A lean framework stack for agile Web development based on Symfony and Vuetify
 site_author: Symlex.org
-site_url: https://docs.symlex.org/en/latest
+site_url: https://docs.symlex.org/zh/latest
 
 # Repository
 repo_name: symlex/symlex
