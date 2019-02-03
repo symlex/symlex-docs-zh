@@ -1,6 +1,6 @@
-# Error Handling
+# 错误处理
 
-Exceptions are automatically catched by the application and then passed on to ErrorRouter, which either renders an HTML error page or returns the error details as JSON (depending on the request headers). Exception class names are mapped to error codes in `app/config/exceptions.yml`:
+应用程序会自动捕获异常，然后将其传递给 ErrorRouter ， ErrorRouter 会呈现 HTML 错误页面或将错误详细信息返回为 JSON （具体取决于请求标头）。 异常类名称映射到错误代码中 `app/config/exceptions.yml`:
 
 ```yaml
 parameters:
@@ -31,4 +31,4 @@ services:
             - "%app.debug%"
 ```
 
-The filename for Twig error templates is `app/templates/error/[code].twig`. If no template is found, the default template (`default.twig`) is used.
+Twig 错误模板的文件名是`app/templates/error/[code].twig`。 如果未找到模板，则为默认模板 (`default.twig`) 。

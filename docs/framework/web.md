@@ -1,12 +1,12 @@
-# Controllers for Web Applications
+# Web应用程序的控制器
 
-Symlex controllers are plain PHP classes by default. They are configured as public services either in `app/config/web.yml` (HTML) or `app/config/rest.yml` (REST):
+默认情况下， Symlex 控制器是普通的 PHP 类。 它们在 `app/config/web.yml`（HTML）或 `app/config/rest.yml`（REST）中配置为公共服务:
 
 ```yaml
 controller.web.index:
     public: true
     class: App\Controller\Web\IndexController
-    
+
 controller.rest.v1.users:
     public: true
     class: App\Controller\Rest\V1\UsersController
@@ -16,33 +16,31 @@ controller.rest.v1.users:
 ```
 
 !!! note
-    In many other frameworks, controllers aren't services by default. Some developers are used to give 
-    controllers direct access to the service container instead of using dependency injection, which makes testing more 
-    difficult and leads to less portable code (framework lock-in).
+    在许多其他框架中，默认情况下控制器不是服务。 一些开发人员习惯于让控制器直接访问服务容器，而不是使用依赖注入，这使得测试更加困难并导致更少的可移植代码（框架锁定）。
 
-The routers pass on the request instance to each matched controller action as last argument. It contains request parameters and headers as described on the [Symfony documentation](http://symfony.com/doc/current/book/http_fundamentals.html#requests-and-responses-in-symfony).
+路由器将请求实例作为最后一个参数传递给每个匹配的控制器操作。 它包含请求参数和标题，如上所述 [Symfony 的文档](http://symfony.com/doc/current/book/http_fundamentals.html#requests-and-responses-in-symfony).
 
-**Web controller actions** can either return 
+**Web 控制器操作** 可以返回不同的
 
- - **null**: Matching Twig template will be rendered 
- - an **array**: Twig template can access those values as variables
- - a **string**: User will be redirected to URL
- - or a `Symfony\Component\HttpFoundation\Response` object 
- 
-Twig's template base directory can be configured in `app/config/twig.yml` (`twig.path`). The template filename is matching the request route: `[twig.path]/[controller]/[action].twig`. 
+ - **null**: 将呈现匹配的 Twig 模板
+ - 一个 **array**: Twig 模板可以将这些值作为变量访问
+ - 一个 **string**: 用户将被重定向到 URL
+ - 或者 `Symfony\Component\HttpFoundation\Response` 的对象
 
-If no controller or action name is given, `index` is the default e.g. `index/index.twig` will be used for rending `/`.
+Twig 的模板基目录可以在`app/config/twig.yml`（`twig.path`）中配置。 模板文件名与请求路径匹配：`[twig.path]/[controller]/[action].twig`。
+
+如果没有给出控制器或动作名称，`index` 是默认值，例如 `index/index.twig`将用于渲染 `/`。
 
 !!! example
     ```php
     <?php
-    
+
     namespace App\Controller\Web;
-    
+
     class IndexController
     {
         /**
-         * Renders the template in app/templates/default/index.twig
+         * 在 app/templates/default/index.twig 中呈现模板
          */
         public function indexAction()
         {

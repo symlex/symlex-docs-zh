@@ -1,11 +1,11 @@
-# Acceptance Tests
+# 验收测试
 
-A ready-to-use [Codeception](https://codeception.com/) test suite for acceptance tests is located in `app/codeception/`:
+即用型 [ Codeception ](https://codeception.com/) 验收测试套件位于 `app/codeception/`:
 
     /var/www/html# bin/codecept run
     Codeception PHP Testing Framework v2.4.5
     Powered by PHPUnit 6.5.12 by Sebastian Bergmann and contributors.
-    
+
     Acceptance Tests (8) --------------------------------------------
     ✔ HomeCest: Open homepage (2.35s)
     ✔ HomeCest: Login (7.66s)
@@ -16,9 +16,9 @@ A ready-to-use [Codeception](https://codeception.com/) test suite for acceptance
     ✔ UserCest: View edit profile page (7.26s)
     ✔ UserCest: View change password page (6.45s)
     -----------------------------------------------------------------
-    
+
     Time: 1.1 minutes, Memory: 12.00MB
-    
+
     OK (8 tests, 25 assertions)
 
-Codeception's main config file is `codeception.yml` in the project directory.
+Codeception 的主配置文件是 `codeception.yml` 在项目目录中。
