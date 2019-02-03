@@ -1,9 +1,8 @@
-# Bootstrapping
+# 启动框架
 
-## Micro-Kernel ##
+## 微内核 ##
 
-Bootstrapping is performed using a [micro-kernel](https://github.com/symlex/di-microkernel). It's just a few lines to 
-set environment parameters, initialize the service container and run the app:
+启动框架用来展示一个 [微内核](https://github.com/symlex/di-microkernel)。 只需几行即可设置环境参数，初始化服务容器并运行应用程序:
 
 ```php
 <?php
@@ -25,14 +24,14 @@ class Kernel
 
         $this->boot();
     }
-    
+
     ...
-    
+
     public function getApplication()
     {
         return $this->getContainer()->get('app');
     }
-    
+
     public function run()
     {
         return $this->getApplication()->run();
@@ -40,9 +39,9 @@ class Kernel
 }
 ```
 
-## Customization ##
+## 自定义 ##
 
-The kernel base class can be extended to customize it for a specific purpose (e.g. command line application):
+可以扩展内核基类以针对特定目的（例如，命令行应用程序）对其进行自定义:
 
 ```php
 <?php
@@ -66,9 +65,9 @@ class ConsoleApp extends Kernel
 }
 ```
 
-## Run an App ##
+## 启动应用 ##
 
-Creating a kernel instance and calling `run()` is enough to start any application (see `app/console` and `web/app.php`):
+创建一个内核实例并调用 `run()` 足以启动任何应用程序（参见`app/console` 和 `web/app.php`）：
 
 ```php
 #!/usr/bin/env php
