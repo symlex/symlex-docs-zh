@@ -1,9 +1,8 @@
-# Impressum / Imprint
+# 版权声明/版权
 
-Feel free to send an e-mail to [hello@symlex.org](mailto:hello@symlex.org) if you have any questions, 
-need [commercial support](https://blog.liquidbytes.net/contact/) or just want to say hello.
-      
-Responsible for editorial content according to § 5 TMG / § 55 RStV:
+随时发送电子邮件至[ hello@symlex.org ](mailto:hello@symlex.org) 如果您有任何疑问，需要[商业支持](https://blog.liquidbytes.net/contact/) 或只是想打个招呼。
+
+根据 §5TMG /§55RStV 负责编辑内容：
 
 <address>
   Michael Mayer<br />
@@ -14,23 +13,34 @@ Responsible for editorial content according to § 5 TMG / § 55 RStV:
 
 USt-ID: DE189758973
 
-## Community Chat ##
+中文编辑内容翻译负责人
+
+<address>
+  Tuzi Moe<br />
+  2 Helvetia Drive<br />
+  0630 Browns Bay<br />
+  Auckland<br />
+  New Zealand
+</address>
+
+## 社区联系 ##
 
 https://gitter.im/symlex/community    
 
-## Privacy Policy ##
+## 隐私政策 ##
 
-If you’re just browsing the website, *Read the Docs* collects the same basic information that most websites collect. 
-They use common internet technologies, such as cookies and web server logs. 
-They collect this basic information from everybody, whether they have an account or not.
+如果您只是浏览网站，*阅读文档* 会收集大多数网站收集的相同基本信息。
 
-The information they collect about all visitors includes:
+他们使用常见的互联网技术，如 cookie 和 Web 服务器日志。
+他们从每个人那里收集这些基本信息，无论他们是否拥有账户。
 
-  - the visitor’s browser type
-  - language preference
-  - referring site
-  - the date and time of each visitor request
+他们收集的有关所有访客的信息包括：
 
-They also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
+  - 访问者的浏览器类型
+  - 语言偏好
+  - 来源网站
+  - 每个访客请求的日期和时间
 
-See their [Privacy Policy](https://docs.readthedocs.io/en/latest/privacy-policy.html) and [DMCA Takedown Policy](https://docs.readthedocs.io/en/latest/dmca/).
+他们还收集潜在的个人识别信息，如互联网协议（IP）地址。
+
+看他们的 [隐私政策](https://docs.readthedocs.io/en/latest/privacy-policy.html) 和 [DMCA 移除政策](https://docs.readthedocs.io/en/latest/dmca/).

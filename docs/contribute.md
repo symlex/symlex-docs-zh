@@ -1,38 +1,36 @@
-# Every contribution makes a difference
+# 每一项贡献都有所作为
 
-We welcome contributions of any kind including pull requests, ideas, bug reports,
-testing, writing documentation, tutorials and blog posts. If you help with development,
-you have the opportunity to learn Symfony, PHPUnit, Vue.js and much more.
+我们欢迎任何类型的贡献，包括拉取请求，想法，错误报告，测试，编写文档，教程和博客文章。 如果您帮助开发，您将有机会学习 Symfony， PHPUnit ， Vue.js 等等。
 
-Since we are already pretty much feature-complete for our own needs, it is well possible that you won't find any open issues.
-Issues labeled [help wanted](https://github.com/symlex/symlex/labels/help%20wanted) /
-[easy](https://github.com/symlex/symlex/labels/easy) can be good (first) contributions otherwise.
+由于我们已经完全满足了我们自己的需求，因此您很可能找不到任何未解决的问题。
+目前已知的问题 [help wanted](https://github.com/symlex/symlex/labels/help%20wanted) /
+[easy](https://github.com/symlex/symlex/labels/easy) 否则可以是好的（第一）贡献。
 
-## Questions? ##
+## 有任何的疑问？ ##
 
-Feel free to send an e-mail to [hello@symlex.org](mailto:hello@symlex.org) if you have any questions, 
-need [commercial support](https://blog.liquidbytes.net/contact/) or just want to say hello.
+欢迎给我们发送邮件至 [hello@symlex.org](mailto:hello@symlex.org) 如果你有任何的疑问，
+如果你需要 [商业支持](https://blog.liquidbytes.net/contact/) 或者只是想说个你好。
 
 ## Pull Requests ##
 
-Our [step-by-step guide](https://github.com/symlex/symlex/wiki/Pull-Requests) explains how to submit new features, bugfixes and documentation.
+我们的 [简单向导](https://github.com/symlex/symlex/wiki/Pull-Requests) 解释了如何提交新的功能，修复 Bug 和文档更新。
 
-## Feature Requests ##
+## 新需求 ##
 
-You are welcome to add specific feature requests directly to our main [GitHub issue tracker](https://github.com/symlex/symlex/issues)
-or the corresponding sub-project if no similar [idea](https://github.com/symlex/symlex/labels/idea)
-or [todo](https://github.com/symlex/symlex/labels/todo) already exists.
-Please don't use the issue tracker to ask general questions.
+欢迎您直接向我们的主要添加特定功能请求 [GitHub issue 跟踪器](https://github.com/symlex/symlex/issues)
+或者相应的子项目，如果没有类似的话 [想法](https://github.com/symlex/symlex/labels/idea)
+或 [todo](https://github.com/symlex/symlex/labels/todo) 已经在做的功能。
+请不要使用问题跟踪器来提出一般性问题。
 
-## Reporting Bugs ##
+## 汇报 Bug ##
 
-Please use the GitHub issue tracker for [symlex/symlex](https://github.com/symlex/symlex/issues) (complete framework stack), 
-[symlex/symlex-core](https://github.com/symlex/symlex-core/issues) (kernel and router) 
-or the corresponding sub-project to report clearly identified bugs and impediments to us.
-If you're not sure, start by asking [via email](mailto:hello@symlex.org).
-When reporting an issue, please provide the version in use and information about your environment like browser, operating system, installed memory, and processor type.
+请使用 GitHub issue 跟踪器 [symlex/symlex](https://github.com/symlex/symlex/issues) (完整的框架),
+[symlex/symlex-core](https://github.com/symlex/symlex-core/issues) (内核和路由)
+或相应的子项目向我们报告明确的错误和障碍。
+如果你不确定，首先要问 [Email](mailto:hello@symlex.org).
+报告问题时，请提供正在使用的版本以及有关您的环境的信息，如浏览器，操作系统，已安装的内存和处理器类型。
 
-## Donations ##
+## 捐赠 ##
 
-Please leave a star on [GitHub](https://github.com/symlex/symlex) if you like this project, it provides enough motivation to keep going.
-Thank you very much! <3
+如果您喜欢这个项目，请在[ GitHub ](https://github.com/symlex/symlex)上留一颗星，它提供足够的动力继续前进。
+非常感谢你！ <3

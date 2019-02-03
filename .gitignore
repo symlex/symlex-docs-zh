@@ -68,3 +68,6 @@ ENV/
 
 # MkDocs documentation
 site/
+
+# Mac OS
+*/.DS_Store

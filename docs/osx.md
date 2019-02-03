@@ -1,23 +1,23 @@
-# PHP, Composer and Docker on Mac OS X
+# 在 Mac OS X 上使用 PHP, Composer 和 Docker
 
-Mac OS X is shipped with outdated PHP versions. You can install a more current version via [Homebrew](https://brew.sh/)
-or download the latest version from [Liip](https://php-osx.liip.ch/).
+Mac OS X 附带过时的 PHP 版本。 您可以通过[ Homebrew ](https://brew.sh/)安装更新版本
+或从[ Liip ](https://php-osx.liip.ch/)下载最新版本。
 
-After installing a custom PHP version, you should add its path to your `PATH` in `~/.bash_profile`:
+安装自定义 PHP 版本后，您应该将其路径添加到您的 `PATH` 位于你电脑上的 `~/.bash_profile`:
 
 ```
 export PATH="/usr/local/bin:/usr/local/php5/bin:$PATH"
 ```
 
-Composer is available for download at https://getcomposer.org/download/ (follow the instructions). Please add `/usr/local/bin` to your path in `~/.bash_profile` and move composer there instead of keeping composer.phar in your local project directory:
+Composer 可从以下网址下载 https://getcomposer.org/download/ （按照说明）。 请把 `/usr/local/bin` 添加到以下文件中 `~/.bash_profile` 并将 composer 移动到那里，而不是将 composer.phar 保存在本地项目目录中：
 
 ```
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
-Docker - a free tool that provides easy-to-use container virtualization - is available for download at https://download.docker.com/mac/stable/Docker.dmg
+Docker 是一款提供易于使用的容器虚拟化的免费工具，可从以下网址下载 https://download.docker.com/mac/stable/Docker.dmg
 
-To properly work with JavaScript, you should also install [NodeJS](https://nodejs.org/en/download/) (includes npm) and [Yarn](https://yarnpkg.com/en/):
+要正确使用 JavaScript ，您还应该安装[ NodeJS ](https://nodejs.org/en/download/) (包括 npm ) 和 [Yarn](https://yarnpkg.com/en/):
 
 ```
 sudo npm install -g yarn
