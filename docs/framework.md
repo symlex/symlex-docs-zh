@@ -1,81 +1,79 @@
-# Getting Started
+# 快速开始
 
-## Command-line Application ##
+## 命令行应用 ##
 
-Make sure you have PHP 7.1+ and [Composer](https://getcomposer.org/) installed on your system.
+确保你已安装 PHP 7.1+ 和 [Composer](https://getcomposer.org/) 在你的系统上。
 
-**Step 1:** Run `composer` to create a new project from our example:
+**第一步:** 运行 `composer` 来创建一个新的项目用于我们的示例:
 
     composer create-project symlex/stream-sampler myapp
 
-Composer will ask for config values to generate `app/config/parameters.yml` for you.
+Composer 会询问一些配置的变量来为你生成 `app/config/parameters.yml` 。
 
-**Step 2:** Use `app/console` to execute commands: 
+**第二步:** 使用 `app/console` 来执行命令:
 
     cd myapp
     app/console sample -i internal -s 10
 
-YAML files located in `app/config` configure the app based on parameters and services.
-The main config file is `app/config/console.yml`.
+ 根据参数和服务配置应用程序，YAML 会在 `app/config` 目录下生成。
+主配置文件是 `app/config/console.yml`。
 
 Repository: https://github.com/symlex/stream-sampler
 
-## Web Applications ##
+## Web 应用 ##
 
-Before you start, make sure you have PHP 7.1+, [Composer](https://getcomposer.org/) and [Docker](https://www.docker.com/) installed on your system 
-([howto](https://docs.symlex.org/en/latest/osx/) for Mac OS X). 
-Instead of using Docker, you can set up your own runtime environment based on the existing 
+在开始之前，请确定你已拥有 PHP 7.1+, [Composer](https://getcomposer.org/) 和 [Docker](https://www.docker.com/) 在你的系统里。
+([如何安装](https://docs.symlex.org/zh/latest/osx/) 适用于 Mac OS X)。
+如果你选择使用 Docker ，您可以根据现有的运行环境来设置自己的运行环境。
 [Dockerfiles](https://github.com/symlex/symlex/tree/master/app/docker).
-We recommend using [Nginx](https://www.nginx.com/) with [PHP-FPM](http://php.net/manual/en/install.fpm.php)
-and URL [rewrite rules](https://github.com/symlex/symlex/blob/master/app/docker/nginx/site.conf) similar to Symfony.
-In addition, you might need a [database](https://dev.mysql.com/downloads/mysql/) plus
-[nodejs](https://nodejs.org/en/), [npm](https://www.npmjs.com/) and [yarn](https://yarnpkg.com/) to build the frontend.
+我们推荐使用 [Nginx](https://www.nginx.com/) 配合 [PHP-FPM](http://php.net/manual/en/install.fpm.php)
+和 URL [重写规则](https://github.com/symlex/symlex/blob/master/app/docker/nginx/site.conf) 和 Symfony 十分相似。
+你还需要一个 [数据库](https://dev.mysql.com/downloads/mysql/) 和
+[nodejs](https://nodejs.org/en/)， [npm](https://www.npmjs.com/) ， [yarn](https://yarnpkg.com/) 来建立前端
 
-### Simple REST API ###
+### 简易 REST API ###
 
-**Step 1:** Run `composer` to create a new project:
+**第一步:** 使用 `composer` 来建立一个新项目:
 
 ```
 composer create-project symlex/rest-api myapp
 ```
 
-Composer will ask for config values to generate `app/config/parameters.yml` for you.
+Composer 会询问一些配置的变量来为你生成 `app/config/parameters.yml` 。
 
-Make sure `storage/cache` is writable so that cache files can be created by the app.
+确保 `storage/cache` 目录是可写的，以便用于生成缓存。
 
-**Step 2:** Start nginx and PHP using `docker-compose`:
+**第二步:** 用这个命令来启动 Nginx 和 PHP `docker-compose`:
 
 ```
 cd myapp
 docker-compose up
 ```
 
-**Step 3:** Open http://localhost:8088/example/123 in a browser ([source](https://github.com/symlex/rest-api/blob/master/src/Controller/ExampleController.php)).
+**第三步:** 在浏览器中访问 http://localhost:8088/example/123 ([源代码](https://github.com/symlex/rest-api/blob/master/src/Controller/ExampleController.php))。
 
-To open a terminal, run `docker-compose exec php sh`.
+打开终端器，运行 `docker-compose exec php sh`。
 
-YAML files located in `app/config` configure the app based on parameters and services.
-The main config file is `app/config/rest.yml`.
+位于 app/config 中的 YAML 文件根据参数和服务配置应用程序。 主配置文件是 app/config/rest.yml。
 
 !!! note
-    If you add `localhost-debug` to your `/etc/hosts` and access the site with that, it will load in debug
-    mode (you'll see a stack trace and other debug information on the error pages).
+     如果你将 `localhost-debug` 添加到` /etc/hosts` 并使用它访问该站点，它将在 debug 模式中加载（您将在错误页面上看到堆栈跟踪和其他调试信息）。
 
 Repository: https://github.com/symlex/rest-api
 
-### Single-page Application ###
+### 单页应用程序 ###
 
-**Step 1:** Run `composer` to create a new project:
+**第一步:** 使用 `composer` 来建立一个新项目:
 
 ```
 composer create-project symlex/symlex myapp
 ```
 
-Composer will ask for config values to generate `app/config/parameters.yml` for you.
+Composer 会询问一些配置的变量来为你生成 `app/config/parameters.yml` 。
 
-Make sure `storage/cache` is writable so that cache files can be created by the app.
+确保 `storage/cache` 目录是可写的，以便用于生成缓存。
 
-**Step 2:** Start nginx, PHP and MySQL using `docker-compose`:
+**第二步:** Start nginx, PHP and MySQL using `docker-compose`:
 
 ```
 cd myapp
@@ -83,13 +81,13 @@ docker-compose up
 ```
 
 !!! info
-    This docker-compose configuration is for testing and development purposes only. 
-    You might need to tweak it if you run Docker with a different user for security reasons.
-    On OS X, the current release of Docker is [really slow](https://twitter.com/lastzero/status/829191426391027712) 
-    in executing PHP from the host's file system.
-    
+    此 docker-compose 配置仅用于测试和开发目的。
+    出于安全原因，如果您使用其他用户运行 Docker ，则可能需要对其进行调整。
+    在OS X上，Docker的当前版本会 [非常慢](https://twitter.com/lastzero/status/829191426391027712)
+    从主机的文件系统执行 PHP 。
 
-**Step 3:** Let [Phing](https://www.phing.info/) initialize the database and build the front-end components for you:
+
+**第三步:** 让 [Phing](https://www.phing.info/) 初始化数据库并为您构建前端组件：
 
 ```
 docker-compose exec php sh
@@ -97,26 +95,23 @@ bin/phing dev
 ```
 
 !!! tip
-    You can also use this approach to execute other commands later (see `build.xml`). Alternatively, you can 
-    install [npm](https://www.npmjs.com/) and [yarn](https://yarnpkg.com/) locally and link "db" to 127.0.0.1
-    in `/etc/hosts` to run them directly on your host.
+    您也可以使用此方法稍后执行其他命令(参见 `build.xml`)。 或者，您可以安装 [npm](https://www.npmjs.com/) 和 [yarn](https://yarnpkg.com/) 在 `/etc/hosts` 可以直接在本地链接 "db" 至 127.0.0.1。
+
 
 Repository: https://github.com/symlex/symlex
 
 #### Web UI ####
 
-After successful installation, open the site at http://localhost:8081/ and log in as `admin@example.com` using the 
-password `passwd`.
+成功安装后，浏览器访问 http://localhost:8081/ 以用户名 `admin@example.com` 和密码 `passwd`。登入
 
 !!! note
-    If you add `localhost-debug` to your `/etc/hosts` and access the site with that, it will load in debug
-    mode (you'll see a stack trace and other debug information on the error pages).
+     如果你将 `localhost-debug` 添加到` /etc/hosts` 并使用它访问该站点，它将在 debug 模式中加载（您将在错误页面上看到堆栈跟踪和其他调试信息）。
 
 ![Screenshot](img/login.jpg)
 
 #### MailHog ####
 
-The [mailhog](https://github.com/ian-kent/MailHog) user interface is available at http://localhost:8082/. It can be used
-to receive and view mails automatically sent by the system, e.g. when new users are created.
+[Mailhog](https://github.com/ian-kent/MailHog) 界面可以在 http://localhost:8082/ 找到。 它可以使用
+接收和查看系统自动发送的邮件，例如 当创建新用户。
 
 ![Screenshot](img/mailhog.jpg)
