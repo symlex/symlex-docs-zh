@@ -1,37 +1,37 @@
-# Models and Database Abstraction
+# 模型和数据库抽象
 
-Symlex isn't designed for any specific database abstraction layer or model library. 
-Our examples are based on MySQL and [Doctrine ActiveRecord](../doctrine-active-record.md). 
+Symlex 不适用于任何特定的数据库抽象层或模型库。
+我们的例子基于 MySQL 和[ Doctrine ActiveRecord ](../doctrine-active-record.md).
 
-As a lightweight alternative to Doctrine ORM, this library provides Business Model and Database Access Object (DAO) classes that encapsulate Doctrine DBAL to provide high-performance, object-oriented CRUD (create, read, update, delete) functionality for relational databases. It is a lot faster and less complex than Datamapper ORM implementations.
+作为 Doctrine ORM 的轻量级替代，该库提供了业务模型和数据库访问对象（ DAO ）类，它们封装了 Doctrine DBAL ，为关系数据库提供了高性能，面向对象的 CRUD （create, read, update, delete）功能。 它比 Datamapper ORM 实现快得多且复杂得多。
 
-## Business Models
+## 商业模式
 
-Models are logically located between Controllers - which render views and validate user input - and Data Access Objects (DAOs), that are low-level interfaces to a storage backend or Web service.
+模型逻辑上位于控制器（用于呈现视图和验证用户输入）和数据访问对象（ DAO ）之间，后者是存储后端或 Web 服务的低级接口。
 
-Public interfaces of models are high-level and should reflect all use cases within their domain:
- 
+模型的公共接口是高级的，应该反映其域中的所有用例：
+
 !!! example
     ```php
     <?php
-    
+
     namespace App\Model;
-    
+
     use App\Exception\InvalidArgumentException;
     use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
-    
+
     class User extends ModelAbstract
     {
         protected $_daoName = 'User';
-    
+
         public function updatePassword($password)
         {
             if (strlen($password) < 8) {
                 throw new InvalidArgumentException('Password is too short');
             }
-    
+
             $hash = password_hash($password, PASSWORD_DEFAULT);
-    
+
             $this->getDao()->userPassword = $hash;
             $this->getDao()->userPasswordResetToken = null;
             $this->getDao()->userVerificationToken = null;
@@ -39,30 +39,30 @@ Public interfaces of models are high-level and should reflect all use cases with
         }
     }
     ```
-    
-## Data Access Objects
 
-DAOs directly deal with database tables and raw SQL, if needed. `Doctrine\ActiveRecord\Dao\Dao` is suited to implement custom methods using raw SQL
-while `Doctrine\ActiveRecord\Dao\EntityDao` offers many powerful methods to easily deal with database table rows:
+## 数据访问对象
+
+如果需要，DAO直接处理数据库表和原始SQL。 `Doctrine\ActiveRecord\Dao\Dao` 适合使用原始SQL实现自定义方法
+而`Doctrine\ActiveRecord\Dao\EntityDao` 提供了许多强大的方法来轻松处理数据库表行：
 
 !!! example
     ```php
     <?php
-    
+
     namespace App\Dao;
-    
+
     class UserDao extends DaoAbstract
     {
         protected $_tableName = 'users';
         protected $_primaryKey = 'userId';
         protected $_timestampEnabled = true;
-    
+
         protected $_formatMap = [
             'userId' => Format::INT,
             'userRole' => Format::STRING,
             'userNewsletter' => Format::BOOL,
         ];
-    
+
         protected $_hiddenFields = [
             'userPassword',
             'userPasswordResetToken',
@@ -70,9 +70,9 @@ while `Doctrine\ActiveRecord\Dao\EntityDao` offers many powerful methods to easi
         ];
     }
     ```
-    
-## Workflow
 
-This diagram illustrates how Controller, Model, DAO and database interact with each other:
+## 工作流程
+
+此图说明了 Controller，Model ， DAO 和数据库如何相互交互：
 
 ![Doctrine ActiveRecord](../doctrine-active-record/img/workflow.svg)
