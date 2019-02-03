@@ -1,17 +1,17 @@
-# Credits
+# 致谢
 
-A big **thank you** to everyone who made this possible!
+感谢每一个让这个项目得以发展的人，**万分感谢**！
 
-## Technologies ##
-* [PHP](http://www.php.net/) – Hypertext Preprocessor
-* [Symfony](https://symfony.com/) – High Performance PHP Framework for Web Development
-* [PHPUnit](https://phpunit.de/) – The PHP Testing Framework
-* [Vuetify](https://vuetifyjs.com/en/) – [Vue.js](https://vuejs.org/) Material Component Framework
+## 技术 ##
+* [PHP](http://www.php.net/) – 超文本处理器
+* [Symfony](https://symfony.com/) – 高性能的 PHP 快速开发框架
+* [PHPUnit](https://phpunit.de/) – PHP 测试框架
+* [Vuetify](https://vuetifyjs.com/en/) – [Vue.js](https://vuejs.org/) 材料组件框架
 * [Google](https://developers.google.com/) [Material Design](https://material.io/)
 
-## Infrastructure ##
+## 基础设施 ##
 
-* [GitHub](https://pages.github.com/) hosts our project homepage and all repositories
-* [Read the Docs](https://readthedocs.org/) hosts this user guide
-* [Travis-CI](https://travis-ci.org/symlex/symlex) builds and tests our code multiple times a day
-* [Docker Hub](https://hub.docker.com/r/symlex/symlex/) hosts our container images
+* [GitHub](https://pages.github.com/) 负责托管我们的项目和主页
+* [Read the Docs](https://readthedocs.org/) 托管技术文档
+* [Travis-CI](https://travis-ci.org/symlex/symlex) 每天多次构建和测试我们的代码
+* [Docker Hub](https://hub.docker.com/r/symlex/symlex/) 托管我们的容器映像
